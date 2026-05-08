@@ -26,3 +26,36 @@ When writing code for this project, agents must adhere to the following guidelin
 4. **Design and Aesthetics (Modern Automotive Workshop)**:
    - Follow a unique, cohesive visual style that reflects a "Modern Automotive Workshop" (industrial, clean, metallic accents, high contrast, vibrant highlight colors like neon orange or electric blue against dark/gray backgrounds).
    - Incrementally add and refine styles as you build out components, ensuring each new piece fits the overall modern workshop aesthetic immediately.
+
+# Backend Analysis (Hexagonal Architecture)
+The backend is a Spring Boot application using Hexagonal Architecture.
+
+## Domain Models
+- **Vehicle**: Represents a vehicle in the workshop.
+  - `plate`: Vehicle identifier.
+  - `brand`: Manufacturer brand.
+  - `model`: Vehicle model.
+  - `owner`: Reference to the Owner.
+  - `service`: Reference to the current Service.
+  - `entryDate`: Date when the vehicle entered the workshop.
+  - `exitDate`: Date when the service was completed.
+- **Owner**: Represents the vehicle owner.
+  - `name`: Full name.
+  - `phone`: Contact number.
+- **Service**: Represents the work being performed.
+  - `type`: Type of service (e.g., oil change, brake repair).
+  - `status`: Current state (`ServiceStatus`).
+- **ServiceStatus** (Enum):
+  - `EN_ESPERA`: Waiting for a technician.
+  - `EN_PROCESO`: Work in progress.
+  - `FINALIZADO`: Service completed.
+
+## Planned Operations (API Surface)
+Based on `VehicleUseCase`, the frontend should expect the following functionality:
+- **Register Vehicle**: Create a new entry in the system.
+- **List All Vehicles**: Display active and past workshop entries.
+- **Update Status**: Change the current state of a vehicle's service.
+- **Finish Service**: Mark a service as completed and record the exit date.
+- **Get History**: Search for past services by vehicle plate or owner name.
+
+*Note: As of now, the backend defines the domain and ports but lacks controller implementations. Endpoints will likely follow REST conventions based on these use cases.*
