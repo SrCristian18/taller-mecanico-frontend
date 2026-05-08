@@ -22,3 +22,7 @@ When writing code for this project, agents must adhere to the following guidelin
    - Keep a clean separation of concerns (logic vs. presentation).
    - Write clean, readable, and well-documented code.
    - Prioritize accessibility (a11y) and responsive design.
+
+4. **Design and Aesthetics (Modern Automotive Workshop)**:
+   - Follow a unique, cohesive visual style that reflects a "Modern Automotive Workshop" (industrial, clean, metallic accents, high contrast, vibrant highlight colors like neon orange or electric blue against dark/gray backgrounds).
+   - Incrementally add and refine styles as you build out components, ensuring each new piece fits the overall modern workshop aesthetic immediately.
