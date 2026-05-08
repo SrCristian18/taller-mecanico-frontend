@@ -53,6 +53,11 @@ When writing code for this project, agents must adhere to the following guidelin
    - Follow a unique, cohesive visual style that reflects a "Modern Automotive Workshop" (industrial, clean, metallic accents, high contrast, vibrant highlight colors like neon orange or electric blue against dark/gray backgrounds).
    - Incrementally add and refine styles as you build out components, ensuring each new piece fits the overall modern workshop aesthetic immediately.
 
+5. **No Hard Deletes Policy**:
+   - **CRITICAL RULE**: Never implement or suggest physical `DELETE` operations.
+   - All entities must use a status-based "Soft Delete" (e.g., active/inactive state).
+   - The frontend should respect this by updating status fields instead of calling delete endpoints.
+
 # Backend Analysis (Hexagonal Architecture)
 The backend is a Spring Boot application using Hexagonal Architecture.
 
