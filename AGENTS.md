@@ -4,6 +4,32 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+# Project Context
+A mechanical workshop receives several vehicles daily for different types of services (repair, maintenance, diagnostics, etc.). Currently, the owner lacks a digital tool to register and track the status of each vehicle during the service process. Information about vehicles and services is handled manually or informally, leading to potential data loss, difficulty in tracking progress, and uncertainty about service duration.
+
+This project aims to provide the digital tools to solve these issues.
+
+## Requirements
+
+### Functional Requirements
+1. **Register Vehicle**: Interface to enter vehicle information.
+2. **Register Owner**: Interface to capture owner details.
+3. **Register Service Type**: Selection of requested services.
+4. **List Vehicles**: View of all registered vehicles and their status.
+5. **Update Status**: Easy mechanism to change service progress.
+6. **Finish Service**: Action to finalize and close a service.
+7. **Time Calculation**: Display total attention time.
+8. **Service History**: Search and view past services.
+
+### Non-Functional Requirements
+1. **Efficiency**: Registration flow must be completed in less than 1 minute.
+2. **Security**: Secure data handling.
+3. **Usability**: Simple and easy-to-use industrial-themed interface.
+4. **Performance**: Quick response times for lists and searches.
+5. **Responsive Design**: The interface must adapt and work seamlessly across different devices (mobile, tablet, desktop).
+
+---
+
 # Frontend Best Practices for this Project
 
 When writing code for this project, agents must adhere to the following guidelines:
